@@ -544,7 +544,7 @@ Rule findings          ML probability
 
 more specifically: (this is a very simplified version no lambda architecture no Spark no asyncrounous calculation)
 
-![](.\assets\KYT graph simplified.png)
+![](./assets/KYT graph simplified.png)
 
 ### 8.4 Risk score
 

@@ -51,7 +51,7 @@ reprocessing
 
 These are the KYT triggers:
 
-![KYT triggers](C:\WORK\KYT-engine\concepts\assets\KYT triggers.png)
+![KYT triggers](./assets/KYT triggers.png)
 
 risk intelligence changes over time. Example:
 
@@ -193,7 +193,7 @@ analyst dashboards
 
 The bronze/silver/gold boundries: (with the simplified architecture)
 
-![boundries](C:\WORK\KYT-engine\concepts\assets\bronze silver gold boundry.png)
+![boundries](./assets/bronze silver gold boundry.png)
 
 ## 17. Why Spark?
 
@@ -792,7 +792,7 @@ This is a **different problem in kind, not just degree**, and it's easy to confl
 
 <mark>the full architecture:</mark> <mark>(this diagram contains the exact production architecture flow, read carefully)</mark>
 
-![](.\assets\KYT-professional.svg)
+![](./assets/KYT-professional.svg)
 
 ## 24. Checkpoint concept
 
