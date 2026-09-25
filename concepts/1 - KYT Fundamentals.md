@@ -542,6 +542,10 @@ Rule findings          ML probability
         final score + reasons
 ```
 
+more specifically: (this is a very simplified version no lambda architecture no Spark no asyncrounous calculation)
+
+![](.\assets\KYT graph simplified.png)
+
 ### 8.4 Risk score
 
 There is no universal industry formula in which a score such as 82 has the same meaning everywhere. Vendors and institutions may use 0-100 scores, 0-10 scores, categorical risk levels, alerts, or combinations of these.
