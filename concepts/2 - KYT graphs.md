@@ -33,7 +33,7 @@ flowchart TD
 
 more specifically: (this is a simplified version without Spark involvement and the lambda architecture)
 
-![KYT graph](./assets/KYT graph simplified.png)
+![KYT graph](./assets/KYT-graph-simplified.png)
 
 ## 1. What exactly is a blockchain graph?
 

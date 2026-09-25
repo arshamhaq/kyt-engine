@@ -51,7 +51,7 @@ reprocessing
 
 These are the KYT triggers:
 
-![KYT triggers](./assets/KYT triggers.png)
+![KYT triggers](./assets/KYT-triggers.png)
 
 risk intelligence changes over time. Example:
 
@@ -193,7 +193,7 @@ analyst dashboards
 
 The bronze/silver/gold boundries: (with the simplified architecture)
 
-![boundries](./assets/bronze silver gold boundry.png)
+![boundries](./assets/bronze-silver-gold-boundry.png)
 
 ## 17. Why Spark?
 
