@@ -1,1 +1,16 @@
 concepts/replace.py
+
+# Go build and test artifacts.
+/bin/
+*.test
+*.test.exe
+coverage.out
+
+# Local configuration and Python environments for future ML work.
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
