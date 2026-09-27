@@ -5,11 +5,12 @@
 **Know Your Transaction (KYT)** assesses transaction risk using activity patterns,
 counterparty intelligence, and exposure to illicit activity. This capstone explores
 how explicit rules and an ML prediction can produce an explainable risk result.
-The application is primarily **Go**; **Python** is reserved for later ML training,
-evaluation, and model export.
+The application is primarily **Go**. **Python** prepares the Elliptic++ feature
+dataset and will later support ML training, evaluation, and model export.
 
-**Current status: scaffold only.** Types are empty placeholders. Rules, scoring
-formulas, models, and HTTP handlers will be designed and reviewed one component at
+**Current status: Go scaffold plus Elliptic++ feature extraction.** Go types are
+empty placeholders. Rules, scoring formulas, models, and HTTP handlers will be
+designed and reviewed one component at
 a time. The entry point and Docker container currently exit without starting a service.
 
 ## Lambda architecture
@@ -51,7 +52,8 @@ flowchart TB
 ```
 
 An upstream system supplies the **complete `FeatureVector`**. This repository
-starts at that input boundary; it does not load, merge, or compute upstream features.
+starts at that input boundary. The separate offline Python pipeline prepares an
+educational Elliptic++ dataset for reviewing that input contract.
 See the [full numbered blueprint](concepts/assets/KYT-professional.svg) and
 [Lambda architecture notes](<concepts/3 - Lambda Architecture and Data pipeline.md>).
 
@@ -74,13 +76,26 @@ We will design components **9–14** from the blueprint within this smaller scop
 Development will use **small synthetic or hand-curated datasets** of precomputed
 feature vectors, expected findings, and risk labels. These will support readable
 component tests and later ML experiments without requiring a blockchain pipeline.
-No datasets or model artifacts are included yet.
+The Elliptic++ pipeline additionally produces a complete wallet-level feature
+table locally. Large source CSVs and derived tables are excluded from Git;
+inspection, schema, and validation reports are included. No trained models exist.
 
-Ingestion, Kafka, Spark, data lakes, graph construction and analysis, feature
-computation and stores, streaming updates, historical rescoring, and Stridge
+For the Go scoring service, ingestion, Kafka, Spark, data lakes, graph construction
+and analysis, feature computation and stores, streaming updates, historical rescoring, and Stridge
 integration are out of scope. Component 14 is limited to scoring orchestration and
 HTTP; persistence, event publishing, notifications, and case workflows are deferred.
 See [the capstone boundary](docs/architecture.md).
+
+## Elliptic++ feature dataset
+
+This offline step inspects the official Actors data, preserves its numeric fields,
+and derives topology, discrete-time summaries, and coarse neighbor-label
+intelligence. It outputs one row per wallet, with `label` last as target metadata.
+Target labels never contribute to their own features. Static neighbor labels
+simulate an intelligence layer and require care in future ML evaluation.
+
+See [setup and commands](data/README.md), [the inspected schema](docs/elliptic_schema.md),
+and [feature definitions and limitations](docs/elliptic_features.md).
 
 ## Project layout
 
@@ -92,6 +107,7 @@ See [the capstone boundary](docs/architecture.md).
 | `internal/api/` | Future HTTP transport. |
 | `config/` | Placeholder rule configuration. |
 | `ml/`, `models/`, `testdata/` | Future Python work, exported models, and fixtures. |
+| `features/`, `data/`, `tests/` | Offline Elliptic++ extraction, local data, and Python tests. |
 | `docs/`, `concepts/` | Capstone documentation and existing architecture notes. |
 
 ## Development

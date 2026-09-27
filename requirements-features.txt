@@ -1,0 +1,3 @@
+# Python 3.10+; only dataset processing. No training/inference dependencies.
+numpy>=1.23,<3
+pandas>=1.5,<3

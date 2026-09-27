@@ -14,3 +14,12 @@ coverage.out
 venv/
 __pycache__/
 *.py[cod]
+
+# Elliptic++ source data and generated tables stay local.
+/data/raw/*
+!/data/raw/.gitkeep
+/data/derived/*
+!/data/derived/.gitkeep
+!/data/derived/feature_report.json
+!/data/derived/feature_schema.json
+!/data/derived/elliptic_schema_report.json
