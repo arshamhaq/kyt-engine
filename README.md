@@ -132,8 +132,12 @@ masked. The canonical CSV uses all static public labels, so passing its graph
 values directly to Go would **not** reproduce those held-out metrics. A future
 upstream feature source must define the intelligence available at decision time.
 
-The sample Go invocation is in [the rule tests](internal/rules/engine_test.go).
-Run `go test ./internal/rules -v` to see the vector-to-finding examples.
+The threshold boundary examples in [the rule tests](internal/rules/engine_test.go)
+set only the three values used by the six current rules. For a complete real
+Elliptic++ row, see [the explainability walkthrough](docs/rule_walkthrough.md)
+and its [full-row Go test](internal/rules/walkthrough_test.go). Run
+`go test ./internal/rules -run TestFullIllicitWalletWalkthrough -v` to see each
+matched finding and its observed values.
 
 ## Project layout
 
