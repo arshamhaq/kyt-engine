@@ -5,7 +5,7 @@ This step only extracts an offline, educational feature dataset:
 ```text
 Official Elliptic++ Actors CSVs -> schema inspection -> feature derivation
                               -> canonical_feature_dataset.csv
-                              -> future Go rules and future ML model
+                              -> Go rules and native Go ML predictor
 ```
 
 This document describes offline feature extraction. Go rule evaluation is covered

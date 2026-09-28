@@ -26,3 +26,6 @@ __pycache__/
 
 # Recomputable, label-masked scratch tables for offline rule analysis.
 /analysis/.cache/
+
+# Recomputable offline ML scratch data.
+/ml/.cache/

@@ -1,3 +1,4 @@
-// Package ml will provide Go inference over precomputed feature vectors.
-// Model loading and prediction behavior are deferred.
+// Package ml performs native Go inference using the reviewed portable logistic
+// artifact produced by the offline Python pipeline. It does not train models,
+// aggregate risk, or load feature data from external systems.
 package ml

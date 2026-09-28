@@ -1,0 +1,78 @@
+{
+  "seed": 20260928,
+  "algorithm": "class-stratified wallet split; fixed 70/15/15 fractions",
+  "unknown_targets_excluded": 557588,
+  "partitions": {
+    "train": {
+      "rows": 185748,
+      "licit": 175762,
+      "illicit": 9986,
+      "illicit_prevalence": 0.05376100953980662,
+      "wallet_id_sha256": "9a61a33bcb1665ebf2aee0de0b7d693efce7970f8e97d520298fe67db1b9e9c6"
+    },
+    "validation": {
+      "rows": 39803,
+      "licit": 37663,
+      "illicit": 2140,
+      "illicit_prevalence": 0.05376479159862322,
+      "wallet_id_sha256": "008df6f1bb5609b8aa2c502775a27ee55920ab0120f96b42f7453bae1822195b"
+    },
+    "test": {
+      "rows": 39803,
+      "licit": 37663,
+      "illicit": 2140,
+      "illicit_prevalence": 0.05376479159862322,
+      "wallet_id_sha256": "6e237700943e4b67764d9ed94e8a9772fb53d4199d79aab68945c1925ba88f0d"
+    }
+  },
+  "partitions_disjoint": true,
+  "intelligence_source": "training-wallet labels only; validation, test, and unknown labels masked",
+  "known_illicit_intelligence_nodes": 9986,
+  "held_out_labels_masked": true,
+  "target_self_exclusion_audit": {
+    "passed": true,
+    "method": "independent per-target set/BFS oracle and target-label mutation",
+    "audited_targets": 16,
+    "wallet_ids": [
+      "111iu559diy1cBDTP9cRhy8sYYcECvvrw",
+      "1121LXUU8xwRaNqpBJDPjyRL1ctApsS4uU",
+      "112FBwDQ21CYxX785HE8qnQwkoDusYsTxC",
+      "112dDMZmaymAW52AciQroksJmK7CLr7XJb",
+      "111112TykSw72ztDN2WJger4cynzWYC5w",
+      "1115LWW3xsD9jT9VRY7viCN9S34RVAAuA",
+      "1117wASFaYgJJP6MiY8cPD5DMdQda8gDZ",
+      "111KdcceSRgzYCnV4EP4nEChtQMEkSP8R",
+      "1111DAYXhoxZx2tsRnzimfozo783x1yC2",
+      "1111VHuXEzHaRCgXbVwojtaP7Co3QABb",
+      "111218KKkh1JJFRHbwM16AwCiVCc4m7he1",
+      "111ECNFEjJsQJ6LkAsAESBGTHBvZE66oX",
+      "1GX28yLjVWux7ws4UQ9FB4MnLH4UKTPK2z",
+      "13i4LYVK7AK2Gah8E14W49Dq7EXaKkHzTW",
+      "15VcPQ6JSQ58VYRbgqiBgxP7DDxY5f2vUm",
+      "17H6V9o7RkQRvzCG5XhREUreYC2Lxy3jde"
+    ],
+    "all_rows_distance_zero_forbidden": true,
+    "note": "Full-graph label-mutation invariance is also tested on synthetic/random graphs; the real-data oracle audit is sampled."
+  },
+  "changed_from_full_label_canonical_rows": {
+    "in_degree": 0,
+    "out_degree": 0,
+    "total_degree": 0,
+    "unique_in_neighbors": 0,
+    "unique_out_neighbors": 0,
+    "unique_neighbors": 0,
+    "direct_illicit_neighbor_count": 7924,
+    "direct_licit_neighbor_count": 147660,
+    "direct_unknown_neighbor_count": 153815,
+    "direct_illicit_neighbor_ratio": 9221,
+    "one_hop_illicit_count": 7924,
+    "two_hop_illicit_count": 84734,
+    "distance_to_other_known_illicit": 30870,
+    "has_other_known_illicit_path": 0
+  },
+  "source_sha256": {
+    "canonical_csv": "0462bd6faa3001b5ebe2c563ce78533c92016fbee88d639f4c4fcc5e9219ff65",
+    "wallets_classes": "4e5132c99f941666bf1fefd4100a1428d339c9252ec6987909e1adf8eac902f9",
+    "address_edges": "ffba894458e262a691e5e4d006f5dc1d0e069fabfe828f443fd157bf7f8393f2"
+  }
+}

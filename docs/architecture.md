@@ -7,9 +7,11 @@
 **Output:** an explainable `RiskResult`, returned through the future KYTScorer and HTTP API.
 
 The Go rule engine now evaluates reviewed thresholds against precomputed features
-and returns explainable findings. ML inference, risk aggregation, scoring formulas,
-and HTTP handlers remain future components. The separate offline Elliptic++
-feature and rule-analysis scripts prepare practice data for this boundary.
+and returns explainable findings. The offline Python pipeline trains and exports an
+accepted Elliptic++ logistic baseline, and the native Go predictor reproduces its
+probability and contribution explanations. Risk aggregation, scoring formulas, and
+HTTP handlers remain future components. The separate offline Elliptic++ feature,
+rule-analysis, and ML scripts prepare practice artifacts for this boundary.
 
 For online Go scoring, blockchain ingestion, graph construction and analysis,
 Spark, Kafka, data lakes, feature computation and extraction, feature stores,
