@@ -1,0 +1,386 @@
+{
+  "split": {
+    "seed": 20260928,
+    "validation_fraction": 0.2,
+    "unknown_targets_excluded": 557588,
+    "rows": 265354,
+    "train": {
+      "rows": 212283,
+      "licit": 200870,
+      "illicit": 11413,
+      "illicit_prevalence": 0.053763136944550434
+    },
+    "validation": {
+      "rows": 53071,
+      "licit": 50218,
+      "illicit": 2853,
+      "illicit_prevalence": 0.053758173013510206
+    },
+    "training_wallet_id_sha256": "b299a0d412f092559417b5758423a3a1bde85d00bd308006f47258483e4b0100",
+    "validation_wallet_id_sha256": "03957f55df1e85f4864e7bae3e3b15ac04799163aac47d7766e5bd8bf195289a",
+    "intelligence_source": "training-wallet labels only; all other labels masked to unknown",
+    "known_illicit_intelligence_nodes": 11413,
+    "held_out_labels_masked": true,
+    "target_self_exclusion_audit": {
+      "passed": true,
+      "method": "independent per-target set/BFS oracle and target-label mutation",
+      "audited_targets": 16,
+      "wallet_ids": [
+        "111iu559diy1cBDTP9cRhy8sYYcECvvrw",
+        "1121LXUU8xwRaNqpBJDPjyRL1ctApsS4uU",
+        "112FBwDQ21CYxX785HE8qnQwkoDusYsTxC",
+        "112dDMZmaymAW52AciQroksJmK7CLr7XJb",
+        "111112TykSw72ztDN2WJger4cynzWYC5w",
+        "1111VHuXEzHaRCgXbVwojtaP7Co3QABb",
+        "1115LWW3xsD9jT9VRY7viCN9S34RVAAuA",
+        "1117wASFaYgJJP6MiY8cPD5DMdQda8gDZ",
+        "1111DAYXhoxZx2tsRnzimfozo783x1yC2",
+        "111218KKkh1JJFRHbwM16AwCiVCc4m7he1",
+        "111FJppFVhFYWPDagaAxp24U6zb7gAyv4",
+        "111HRAJxnoxqyKRVnjqBmwqneUrHc1chi",
+        "1GX28yLjVWux7ws4UQ9FB4MnLH4UKTPK2z",
+        "13i4LYVK7AK2Gah8E14W49Dq7EXaKkHzTW",
+        "15VcPQ6JSQ58VYRbgqiBgxP7DDxY5f2vUm",
+        "17H6V9o7RkQRvzCG5XhREUreYC2Lxy3jde"
+      ],
+      "all_rows_distance_zero_forbidden": true,
+      "note": "Full-graph label-mutation invariance is also tested on synthetic/random graphs; the real-data oracle audit is sampled."
+    },
+    "changed_from_full_label_canonical_rows": {
+      "in_degree": 0,
+      "out_degree": 0,
+      "total_degree": 0,
+      "unique_in_neighbors": 0,
+      "unique_out_neighbors": 0,
+      "unique_neighbors": 0,
+      "direct_illicit_neighbor_count": 5133,
+      "direct_licit_neighbor_count": 112301,
+      "direct_unknown_neighbor_count": 116470,
+      "direct_illicit_neighbor_ratio": 6737,
+      "one_hop_illicit_count": 5133,
+      "two_hop_illicit_count": 78200,
+      "distance_to_other_known_illicit": 24834,
+      "has_other_known_illicit_path": 0
+    },
+    "source_sha256": {
+      "canonical_csv": "0462bd6faa3001b5ebe2c563ce78533c92016fbee88d639f4c4fcc5e9219ff65",
+      "wallets_classes": "4e5132c99f941666bf1fefd4100a1428d339c9252ec6987909e1adf8eac902f9",
+      "address_edges": "ffba894458e262a691e5e4d006f5dc1d0e069fabfe828f443fd157bf7f8393f2"
+    },
+    "environment": {
+      "python": "3.10.4",
+      "numpy": "1.23.4",
+      "pandas": "1.5.1"
+    },
+    "analysis_cache_sha256": "2f47e64acbcb4fa34186bf3c14bd4415a12d0b8bf905a9bd24efd001e5a58ac9"
+  },
+  "selection_policy": {
+    "min_support": 100,
+    "min_true_positives": 50,
+    "max_fpr": 0.01,
+    "threshold_selection_split": "train",
+    "core_pair_chosen_before_validation": [
+      "R1",
+      "R2"
+    ],
+    "objectives_and_precision_floors": {
+      "R1": {
+        "objective": "f0_5",
+        "precision_floor": 0.8
+      },
+      "R2": {
+        "objective": "f0_5",
+        "precision_floor": 0.8
+      },
+      "R3": {
+        "objective": "f0_5",
+        "precision_floor": 0.8
+      },
+      "R4": {
+        "objective": "recall",
+        "precision_floor": 0.95
+      },
+      "R5": {
+        "objective": "recall",
+        "precision_floor": 0.999
+      },
+      "R6": {
+        "objective": "recall",
+        "precision_floor": 0.95
+      },
+      "R7": {
+        "objective": "recall",
+        "precision_floor": 0.95
+      },
+      "R8": {
+        "objective": "recall",
+        "precision_floor": 0.95
+      }
+    }
+  },
+  "rules": [
+    {
+      "id": "R1",
+      "name": "Direct illicit-neighbor concentration",
+      "precision_floor": 0.8,
+      "objective": "f0_5",
+      "rationale": "Concentration captures a high share of attributed illicit counterparties; broad screening candidate.",
+      "conditions": [
+        {
+          "feature": "direct_illicit_neighbor_ratio",
+          "operator": ">=",
+          "threshold": 0.2
+        }
+      ],
+      "training": {
+        "precision": 0.8918200610296289,
+        "recall": 0.7938315955489355,
+        "false_positive_rate": 0.005471200278787275,
+        "support": 10159,
+        "support_fraction": 0.047855928171356164,
+        "tp": 9060,
+        "fp": 1099,
+        "fn": 2353,
+        "tn": 199771,
+        "f0_5": 0.8703337239908547,
+        "precision_wilson_95": [
+          0.885631315056325,
+          0.8977125983814235
+        ]
+      },
+      "status": "candidate for review; not a production rule"
+    },
+    {
+      "id": "R2",
+      "name": "Broad second-hop illicit neighborhood",
+      "precision_floor": 0.8,
+      "objective": "f0_5",
+      "rationale": "Captures many distinct illicit nodes at exact distance two, including wallets with weaker direct exposure.",
+      "conditions": [
+        {
+          "feature": "two_hop_illicit_count",
+          "operator": ">=",
+          "threshold": 50.0
+        }
+      ],
+      "training": {
+        "precision": 0.9952735866206144,
+        "recall": 0.4797161132042408,
+        "false_positive_rate": 0.00012943694927067256,
+        "support": 5501,
+        "support_fraction": 0.025913521101548403,
+        "tp": 5475,
+        "fp": 26,
+        "fn": 5938,
+        "tn": 200844,
+        "f0_5": 0.8191938235030074,
+        "precision_wilson_95": [
+          0.9930834877322794,
+          0.9967724492209609
+        ]
+      },
+      "status": "candidate for review; not a production rule"
+    },
+    {
+      "id": "R3",
+      "name": "Multiple direct illicit neighbors",
+      "precision_floor": 0.8,
+      "objective": "f0_5",
+      "rationale": "Simple counterpart-count alternative. Larger counts are not assumed to be monotonically riskier.",
+      "conditions": [
+        {
+          "feature": "one_hop_illicit_count",
+          "operator": ">=",
+          "threshold": 2.0
+        }
+      ],
+      "training": {
+        "precision": 0.8153139356814701,
+        "recall": 0.23324279330587927,
+        "false_positive_rate": 0.00300194155423906,
+        "support": 3265,
+        "support_fraction": 0.015380411997192428,
+        "tp": 2662,
+        "fp": 603,
+        "fn": 8751,
+        "tn": 200267,
+        "f0_5": 0.5438646671842439,
+        "precision_wilson_95": [
+          0.801635806779893,
+          0.8282509668487152
+        ]
+      },
+      "status": "candidate for review; not a production rule"
+    },
+    {
+      "id": "R4",
+      "name": "Strict direct-neighbor concentration",
+      "precision_floor": 0.95,
+      "objective": "recall",
+      "rationale": "Alternative operating point targeting at least 95% training precision; trades coverage for confidence.",
+      "conditions": [
+        {
+          "feature": "direct_illicit_neighbor_ratio",
+          "operator": ">=",
+          "threshold": 0.6
+        }
+      ],
+      "training": {
+        "precision": 0.9728469555677455,
+        "recall": 0.31078594585122227,
+        "false_positive_rate": 0.0004928560760690994,
+        "support": 3646,
+        "support_fraction": 0.017175185954598344,
+        "tp": 3547,
+        "fp": 99,
+        "fn": 7866,
+        "tn": 200771,
+        "f0_5": 0.6821940993191522,
+        "precision_wilson_95": [
+          0.9670530339014208,
+          0.9776455342150386
+        ]
+      },
+      "status": "candidate for review; not a production rule"
+    },
+    {
+      "id": "R5",
+      "name": "Strict second-hop illicit neighborhood",
+      "precision_floor": 0.999,
+      "objective": "recall",
+      "rationale": "Alternative operating point targeting at least 99.9% training precision, rather than a separate additive finding.",
+      "conditions": [
+        {
+          "feature": "two_hop_illicit_count",
+          "operator": ">=",
+          "threshold": 100.0
+        }
+      ],
+      "training": {
+        "precision": 0.9993528904227783,
+        "recall": 0.40594059405940597,
+        "false_positive_rate": 1.4935032608154527e-05,
+        "support": 4636,
+        "support_fraction": 0.02183877182817277,
+        "tp": 4633,
+        "fp": 3,
+        "fn": 6780,
+        "tn": 200867,
+        "f0_5": 0.7732750275394732,
+        "precision_wilson_95": [
+          0.9980990229791877,
+          0.9997799004909269
+        ]
+      },
+      "status": "candidate for review; not a production rule"
+    },
+    {
+      "id": "R6",
+      "name": "Direct concentration with second-hop corroboration",
+      "precision_floor": 0.95,
+      "objective": "recall",
+      "rationale": "Requires evidence in both direct and exact two-hop neighborhoods; may suppress incidental direct connections.",
+      "conditions": [
+        {
+          "feature": "direct_illicit_neighbor_ratio",
+          "operator": ">=",
+          "threshold": 0.1
+        },
+        {
+          "feature": "two_hop_illicit_count",
+          "operator": ">=",
+          "threshold": 2.0
+        }
+      ],
+      "training": {
+        "precision": 0.9595200581747667,
+        "recall": 0.6936826426005432,
+        "false_positive_rate": 0.0016627669637078709,
+        "support": 8251,
+        "support_fraction": 0.03886792630592181,
+        "tp": 7917,
+        "fp": 334,
+        "fn": 3496,
+        "tn": 200536,
+        "f0_5": 0.8912128239187699,
+        "precision_wilson_95": [
+          0.9550493568083711,
+          0.9635630766136181
+        ]
+      },
+      "status": "candidate for review; not a production rule"
+    },
+    {
+      "id": "R7",
+      "name": "Direct concentration with repeated transaction activity",
+      "precision_floor": 0.95,
+      "objective": "recall",
+      "rationale": "Tests whether multiple provided transactions improve a graph-based condition. Activity alone is not illicit evidence.",
+      "conditions": [
+        {
+          "feature": "direct_illicit_neighbor_ratio",
+          "operator": ">=",
+          "threshold": 0.1
+        },
+        {
+          "feature": "elliptic_f_006",
+          "operator": ">=",
+          "threshold": 2.0
+        }
+      ],
+      "training": {
+        "precision": 0.9596034329683338,
+        "recall": 0.5682116884254798,
+        "false_positive_rate": 0.001359087967342062,
+        "support": 6758,
+        "support_fraction": 0.03183486195314745,
+        "tp": 6485,
+        "fp": 273,
+        "fn": 4928,
+        "tn": 200597,
+        "f0_5": 0.8434126674470022,
+        "precision_wilson_95": [
+          0.954642252045307,
+          0.9640424047646458
+        ]
+      },
+      "status": "candidate for review; not a production rule"
+    },
+    {
+      "id": "R8",
+      "name": "Direct concentration with BTC sent",
+      "precision_floor": 0.95,
+      "objective": "recall",
+      "rationale": "Tests a wallet-level BTC-sent guard on graph concentration. This is not an illicit-funds amount or monetary-exposure ratio.",
+      "conditions": [
+        {
+          "feature": "direct_illicit_neighbor_ratio",
+          "operator": ">=",
+          "threshold": 0.4
+        },
+        {
+          "feature": "elliptic_f_015",
+          "operator": ">=",
+          "threshold": 0.001
+        }
+      ],
+      "training": {
+        "precision": 0.9512195121951219,
+        "recall": 0.5399106282309647,
+        "false_positive_rate": 0.0015731567680589435,
+        "support": 6478,
+        "support_fraction": 0.03051586796870216,
+        "tp": 6162,
+        "fp": 316,
+        "fn": 5251,
+        "tn": 200554,
+        "f0_5": 0.8254521098459477,
+        "precision_wilson_95": [
+          0.9457012875681876,
+          0.9562029069635343
+        ]
+      },
+      "status": "candidate for review; not a production rule"
+    }
+  ]
+}

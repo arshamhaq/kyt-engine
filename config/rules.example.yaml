@@ -1,3 +1,4 @@
-# Placeholder only: the rule configuration schema will be designed later.
-# No rules or thresholds are configured in this scaffold.
+# Runtime thresholds are currently fixed in internal/rules/candidates.go and
+# checked against analysis/results/frozen_rules.json by the Go tests.
+# A future configurable rule format is not yet defined. This file is not loaded.
 {}

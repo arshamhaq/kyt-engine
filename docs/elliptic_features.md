@@ -8,9 +8,10 @@ Official Elliptic++ Actors CSVs -> schema inspection -> feature derivation
                               -> future Go rules and future ML model
 ```
 
-There is no rule evaluation, training, scoring, API, blockchain ingestion,
-sanctions/OFAC lookup, ransomware/mixer attribution, Kafka, Spark, or Stridge code.
-The existing Go FeatureVector placeholder and all `concepts/` files remain untouched.
+This document describes offline feature extraction. Go rule evaluation is covered
+separately in [rule_analysis.md](rule_analysis.md). There is no ML training,
+scoring, API, blockchain ingestion, sanctions/OFAC lookup, ransomware/mixer
+attribution, Kafka, Spark, or Stridge code. All `concepts/` files remain untouched.
 
 ## Sources and row selection
 
@@ -206,10 +207,10 @@ Present distances range from 1 to 52. Structural validation and the independent
 16-wallet real-graph audit passed. The 19 synthetic/pipeline tests pass, including
 480 target-class mutations across 20 random eight-node graphs.
 
-## Proposed Go FeatureVector — review only
+## Go FeatureVector contract
 
-The following is a proposal, not Go implementation. `internal/domain/feature_vector.go`
-has not been changed. An ordered fixed array avoids 55 arbitrary semantic names;
+The reviewed contract is now implemented in `internal/domain/feature_vector.go`.
+An ordered fixed array avoids 55 arbitrary semantic names;
 the future CSV adapter maps index 0 to `elliptic_f_001` through index 54 to
 `elliptic_f_055` using the reviewed schema. Integer types match discrete counts.
 The path flag is a Boolean interpretation of CSV 0/1, and nil distance means no
@@ -246,6 +247,6 @@ type FeatureVector struct {
 
 This maps every feature in the final table, with `WalletID` carried as identity
 metadata. It does not introduce monetary exposure or unobserved attribution fields.
-Review the schema before implementing the Go contract or choosing a model's
+Review the schema before adding new Go consumers or choosing a model's
 nullable-distance handling. Unknown-target filtering and any later normalization
 belong to a future training step, not this extraction pipeline.

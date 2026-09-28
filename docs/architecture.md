@@ -6,9 +6,11 @@
 
 **Output:** an explainable `RiskResult`, returned through the future KYTScorer and HTTP API.
 
-This version is scaffold only. Domain fields, component contracts, rules, scoring
-formulas, ML inference, and HTTP handlers will be designed one component at a time.
+The Go rule engine now evaluates reviewed thresholds against precomputed features
+and returns explainable findings. ML inference, risk aggregation, scoring formulas,
+and HTTP handlers remain future components. The separate offline Elliptic++
+feature and rule-analysis scripts prepare practice data for this boundary.
 
-Blockchain ingestion, graph construction and analysis, Spark, Kafka, data lakes,
-feature computation and extraction, feature stores, streaming updates, historical
-rescoring, and Stridge integration are out of scope for this capstone version.
+For online Go scoring, blockchain ingestion, graph construction and analysis,
+Spark, Kafka, data lakes, feature computation and extraction, feature stores,
+streaming updates, historical rescoring, and Stridge integration remain out of scope.

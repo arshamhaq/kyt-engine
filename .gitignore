@@ -23,3 +23,6 @@ __pycache__/
 !/data/derived/feature_report.json
 !/data/derived/feature_schema.json
 !/data/derived/elliptic_schema_report.json
+
+# Recomputable, label-masked scratch tables for offline rule analysis.
+/analysis/.cache/
