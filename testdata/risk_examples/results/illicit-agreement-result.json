@@ -1,0 +1,326 @@
+﻿{
+  "wallet_id": "111iu559diy1cBDTP9cRhy8sYYcECvvrw",
+  "level": "high",
+  "recommended_action": "review",
+  "review_recommended": true,
+  "ml_triggered": true,
+  "rules_triggered": true,
+  "prediction": {
+    "wallet_id": "111iu559diy1cBDTP9cRhy8sYYcECvvrw",
+    "model_version": "elliptic-logistic-v1",
+    "illicit_probability": 0.9998177989609814,
+    "decision_threshold": 0.693382385987544,
+    "predicted_class": "illicit",
+    "log_odds": 8.610217652889071,
+    "top_positive_factors": [
+      {
+        "feature": "two_hop_illicit_count",
+        "source_name": "two_hop_illicit_count",
+        "raw_value": 397,
+        "was_imputed": false,
+        "standardized_value": 4.918775760229917,
+        "coefficient": 1.7741012683079758,
+        "contribution": 8.726406314746423
+      },
+      {
+        "feature": "direct_illicit_neighbor_count",
+        "source_name": "direct_illicit_neighbor_count",
+        "raw_value": 1,
+        "was_imputed": false,
+        "standardized_value": 3.0063083449486445,
+        "coefficient": 0.9966481925135755,
+        "contribution": 2.9962317781315453
+      },
+      {
+        "feature": "elliptic_f_001",
+        "source_name": "num_txs_as_sender",
+        "raw_value": 1,
+        "was_imputed": false,
+        "standardized_value": 0.9201196555565575,
+        "coefficient": 2.389586242476708,
+        "contribution": 2.198705270350357
+      },
+      {
+        "feature": "direct_illicit_neighbor_ratio",
+        "source_name": "direct_illicit_neighbor_ratio",
+        "raw_value": 0.3333333333333333,
+        "was_imputed": false,
+        "standardized_value": 2.393229830319198,
+        "coefficient": 0.7625844631708029,
+        "contribution": 1.8250398853983174
+      },
+      {
+        "feature": "elliptic_f_006",
+        "source_name": "total_txs",
+        "raw_value": 2,
+        "was_imputed": false,
+        "standardized_value": 1.1841599397993618,
+        "coefficient": 0.9553224636337171,
+        "contribution": 1.1312545910254805
+      },
+      {
+        "feature": "direct_licit_neighbor_count",
+        "source_name": "direct_licit_neighbor_count",
+        "raw_value": 1,
+        "was_imputed": false,
+        "standardized_value": -0.3699821345093531,
+        "coefficient": -2.828473694403785,
+        "contribution": 1.046484734859068
+      },
+      {
+        "feature": "elliptic_f_015",
+        "source_name": "btc_sent_total",
+        "raw_value": 0.02816666,
+        "was_imputed": false,
+        "standardized_value": -0.20126698293498363,
+        "coefficient": -3.107676944707984,
+        "contribution": 0.6254727625979839
+      },
+      {
+        "feature": "elliptic_f_025",
+        "source_name": "fees_total",
+        "raw_value": 0.0007076,
+        "was_imputed": false,
+        "standardized_value": -0.4547701147321467,
+        "coefficient": -1.1145199290045156,
+        "contribution": 0.5068503559846476
+      }
+    ],
+    "top_negative_factors": [
+      {
+        "feature": "out_degree",
+        "source_name": "out_degree",
+        "raw_value": 2,
+        "was_imputed": false,
+        "standardized_value": 0.4978888150998618,
+        "coefficient": -1.455375428749488,
+        "contribution": -0.7246151477455359
+      },
+      {
+        "feature": "in_degree",
+        "source_name": "in_degree",
+        "raw_value": 1,
+        "was_imputed": false,
+        "standardized_value": -0.29981706881372794,
+        "coefficient": 1.8911896381632352,
+        "contribution": -0.5670109338849959
+      },
+      {
+        "feature": "elliptic_f_010",
+        "source_name": "btc_transacted_total",
+        "raw_value": 0.05633332,
+        "was_imputed": false,
+        "standardized_value": -0.2613543190956107,
+        "coefficient": 2.112428652849468,
+        "contribution": -0.5520923522035308
+      },
+      {
+        "feature": "elliptic_f_048",
+        "source_name": "blocks_btwn_output_txs_mean",
+        "raw_value": 0,
+        "was_imputed": false,
+        "standardized_value": -0.2201222525531596,
+        "coefficient": 2.1972160180742093,
+        "contribution": -0.4836561392443788
+      },
+      {
+        "feature": "elliptic_f_017",
+        "source_name": "btc_sent_max",
+        "raw_value": 0.02816666,
+        "was_imputed": false,
+        "standardized_value": -0.19930487796786275,
+        "coefficient": 2.274646164656124,
+        "contribution": -0.45334807626685586
+      },
+      {
+        "feature": "elliptic_f_028",
+        "source_name": "fees_mean",
+        "raw_value": 0.0003538,
+        "was_imputed": false,
+        "standardized_value": -0.45004599101406695,
+        "coefficient": 0.9312173774564442,
+        "contribution": -0.4190906474869059
+      },
+      {
+        "feature": "elliptic_f_043",
+        "source_name": "blocks_btwn_input_txs_mean",
+        "raw_value": 0,
+        "was_imputed": false,
+        "standardized_value": -0.11637916236999643,
+        "coefficient": 2.344414843241994,
+        "contribution": -0.27284103570428975
+      },
+      {
+        "feature": "elliptic_f_013",
+        "source_name": "btc_transacted_mean",
+        "raw_value": 0.02816666,
+        "was_imputed": false,
+        "standardized_value": -0.29172386408173356,
+        "coefficient": 0.7904725799496457,
+        "contribution": -0.23059971547356772
+      }
+    ]
+  },
+  "matched_findings": [
+    {
+      "wallet_id": "111iu559diy1cBDTP9cRhy8sYYcECvvrw",
+      "rule_id": "R1",
+      "family": "direct_exposure",
+      "reason": "At least 20% of distinct graph neighbors are labeled illicit.",
+      "evidence": [
+        {
+          "feature": "direct_illicit_neighbor_ratio",
+          "operator": "\u003e=",
+          "observed": 0.3333333333333333,
+          "threshold": 0.2
+        }
+      ]
+    },
+    {
+      "wallet_id": "111iu559diy1cBDTP9cRhy8sYYcECvvrw",
+      "rule_id": "R2",
+      "family": "two_hop_exposure",
+      "reason": "At least 50 distinct illicit wallets are exactly two undirected graph hops away.",
+      "evidence": [
+        {
+          "feature": "two_hop_illicit_count",
+          "operator": "\u003e=",
+          "observed": 397,
+          "threshold": 50
+        }
+      ]
+    },
+    {
+      "wallet_id": "111iu559diy1cBDTP9cRhy8sYYcECvvrw",
+      "rule_id": "R5",
+      "family": "two_hop_exposure",
+      "reason": "At least 100 distinct illicit wallets are exactly two hops away; stricter than R2.",
+      "evidence": [
+        {
+          "feature": "two_hop_illicit_count",
+          "operator": "\u003e=",
+          "observed": 397,
+          "threshold": 100
+        }
+      ]
+    },
+    {
+      "wallet_id": "111iu559diy1cBDTP9cRhy8sYYcECvvrw",
+      "rule_id": "R6",
+      "family": "corroborated_graph_exposure",
+      "reason": "At least 10% illicit neighbors and at least two distinct illicit wallets exactly two hops away.",
+      "evidence": [
+        {
+          "feature": "direct_illicit_neighbor_ratio",
+          "operator": "\u003e=",
+          "observed": 0.3333333333333333,
+          "threshold": 0.1
+        },
+        {
+          "feature": "two_hop_illicit_count",
+          "operator": "\u003e=",
+          "observed": 397,
+          "threshold": 2
+        }
+      ]
+    },
+    {
+      "wallet_id": "111iu559diy1cBDTP9cRhy8sYYcECvvrw",
+      "rule_id": "R7",
+      "family": "exposure_with_activity",
+      "reason": "At least 10% illicit neighbors and at least two total transactions in the provided wallet features.",
+      "evidence": [
+        {
+          "feature": "direct_illicit_neighbor_ratio",
+          "operator": "\u003e=",
+          "observed": 0.3333333333333333,
+          "threshold": 0.1
+        },
+        {
+          "feature": "elliptic_f_006",
+          "operator": "\u003e=",
+          "observed": 2,
+          "threshold": 2
+        }
+      ]
+    }
+  ],
+  "primary_findings": [
+    {
+      "wallet_id": "111iu559diy1cBDTP9cRhy8sYYcECvvrw",
+      "rule_id": "R1",
+      "family": "direct_exposure",
+      "reason": "At least 20% of distinct graph neighbors are labeled illicit.",
+      "evidence": [
+        {
+          "feature": "direct_illicit_neighbor_ratio",
+          "operator": "\u003e=",
+          "observed": 0.3333333333333333,
+          "threshold": 0.2
+        }
+      ]
+    },
+    {
+      "wallet_id": "111iu559diy1cBDTP9cRhy8sYYcECvvrw",
+      "rule_id": "R5",
+      "family": "two_hop_exposure",
+      "reason": "At least 100 distinct illicit wallets are exactly two hops away; stricter than R2.",
+      "evidence": [
+        {
+          "feature": "two_hop_illicit_count",
+          "operator": "\u003e=",
+          "observed": 397,
+          "threshold": 100
+        }
+      ]
+    },
+    {
+      "wallet_id": "111iu559diy1cBDTP9cRhy8sYYcECvvrw",
+      "rule_id": "R6",
+      "family": "corroborated_graph_exposure",
+      "reason": "At least 10% illicit neighbors and at least two distinct illicit wallets exactly two hops away.",
+      "evidence": [
+        {
+          "feature": "direct_illicit_neighbor_ratio",
+          "operator": "\u003e=",
+          "observed": 0.3333333333333333,
+          "threshold": 0.1
+        },
+        {
+          "feature": "two_hop_illicit_count",
+          "operator": "\u003e=",
+          "observed": 397,
+          "threshold": 2
+        }
+      ]
+    },
+    {
+      "wallet_id": "111iu559diy1cBDTP9cRhy8sYYcECvvrw",
+      "rule_id": "R7",
+      "family": "exposure_with_activity",
+      "reason": "At least 10% illicit neighbors and at least two total transactions in the provided wallet features.",
+      "evidence": [
+        {
+          "feature": "direct_illicit_neighbor_ratio",
+          "operator": "\u003e=",
+          "observed": 0.3333333333333333,
+          "threshold": 0.1
+        },
+        {
+          "feature": "elliptic_f_006",
+          "operator": "\u003e=",
+          "observed": 2,
+          "threshold": 2
+        }
+      ]
+    }
+  ],
+  "reasons": [
+    "ML probability 99.9818% met or exceeded the 69.3382% decision threshold.",
+    "Rule R1: At least 20% of distinct graph neighbors are labeled illicit.",
+    "Rule R5: At least 100 distinct illicit wallets are exactly two hops away; stricter than R2.",
+    "Rule R6: At least 10% illicit neighbors and at least two distinct illicit wallets exactly two hops away.",
+    "Rule R7: At least 10% illicit neighbors and at least two total transactions in the provided wallet features.",
+    "Rules and ML both flag risk; review is recommended."
+  ]
+}

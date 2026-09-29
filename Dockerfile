@@ -7,6 +7,9 @@ COPY internal/ ./internal/
 RUN CGO_ENABLED=0 go build -o /out/server ./cmd/server
 
 FROM scratch
-COPY --from=build /out/server /server
+WORKDIR /app
+COPY --from=build /out/server /app/server
+COPY models/elliptic-logistic-v1/model.json /app/models/elliptic-logistic-v1/model.json
 USER 65532:65532
-ENTRYPOINT ["/server"]
+EXPOSE 8080
+ENTRYPOINT ["/app/server"]

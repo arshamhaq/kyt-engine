@@ -1,0 +1,201 @@
+﻿{
+  "wallet_id": "1133XY4Ctn7KwHhwBqbLr3rBugfHff4Uaq",
+  "level": "medium",
+  "recommended_action": "review",
+  "review_recommended": true,
+  "ml_triggered": false,
+  "rules_triggered": true,
+  "prediction": {
+    "wallet_id": "1133XY4Ctn7KwHhwBqbLr3rBugfHff4Uaq",
+    "model_version": "elliptic-logistic-v1",
+    "illicit_probability": 0.2981368070288999,
+    "decision_threshold": 0.693382385987544,
+    "predicted_class": "licit",
+    "log_odds": -0.856186038078147,
+    "top_positive_factors": [
+      {
+        "feature": "two_hop_illicit_count",
+        "source_name": "two_hop_illicit_count",
+        "raw_value": 53,
+        "was_imputed": false,
+        "standardized_value": 3.097015550845384,
+        "coefficient": 1.7741012683079758,
+        "contribution": 5.49441921672432
+      },
+      {
+        "feature": "direct_licit_neighbor_count",
+        "source_name": "direct_licit_neighbor_count",
+        "raw_value": 0,
+        "was_imputed": false,
+        "standardized_value": -1.0815226261623678,
+        "coefficient": -2.828473694403785,
+        "contribution": 3.059058298002756
+      },
+      {
+        "feature": "out_degree",
+        "source_name": "out_degree",
+        "raw_value": 0,
+        "was_imputed": false,
+        "standardized_value": -0.7039275951052442,
+        "coefficient": -1.455375428749488,
+        "contribution": 1.0244789255348907
+      },
+      {
+        "feature": "elliptic_f_051",
+        "source_name": "transacted_w_address_total",
+        "raw_value": 1,
+        "was_imputed": false,
+        "standardized_value": -0.9032605994165576,
+        "coefficient": -1.1091261792437888,
+        "contribution": 1.001829977492341
+      },
+      {
+        "feature": "unique_neighbors",
+        "source_name": "unique_neighbors",
+        "raw_value": 1,
+        "was_imputed": false,
+        "standardized_value": -0.8838359588026132,
+        "coefficient": -1.0615464473559841,
+        "contribution": 0.9382329221123841
+      },
+      {
+        "feature": "elliptic_f_015",
+        "source_name": "btc_sent_total",
+        "raw_value": 0,
+        "was_imputed": false,
+        "standardized_value": -0.2617877151669409,
+        "coefficient": -3.107676944707984,
+        "contribution": 0.8135516468320828
+      },
+      {
+        "feature": "elliptic_f_035",
+        "source_name": "blocks_btwn_txs_total",
+        "raw_value": 0,
+        "was_imputed": false,
+        "standardized_value": -0.3086923355061199,
+        "coefficient": -2.2733468765001614,
+        "contribution": 0.7017647567223776
+      },
+      {
+        "feature": "elliptic_f_005",
+        "source_name": "lifetime_in_blocks",
+        "raw_value": 0,
+        "was_imputed": false,
+        "standardized_value": -0.3086787291471472,
+        "coefficient": -2.140770162410629,
+        "contribution": 0.6608102131290449
+      }
+    ],
+    "top_negative_factors": [
+      {
+        "feature": "elliptic_f_001",
+        "source_name": "num_txs_as_sender",
+        "raw_value": 0,
+        "was_imputed": false,
+        "standardized_value": -0.8988658859827686,
+        "coefficient": 2.389586242476708,
+        "contribution": -2.147917554976061
+      },
+      {
+        "feature": "elliptic_f_038",
+        "source_name": "blocks_btwn_txs_mean",
+        "raw_value": 0,
+        "was_imputed": false,
+        "standardized_value": -0.30991617501524066,
+        "coefficient": 3.14156774526669,
+        "contribution": -0.9736226591643065
+      },
+      {
+        "feature": "elliptic_f_010",
+        "source_name": "btc_transacted_total",
+        "raw_value": 0.00861203,
+        "was_imputed": false,
+        "standardized_value": -0.33766410543625236,
+        "coefficient": 2.112428652849468,
+        "contribution": -0.7132913313623233
+      },
+      {
+        "feature": "elliptic_f_017",
+        "source_name": "btc_sent_max",
+        "raw_value": 0,
+        "was_imputed": false,
+        "standardized_value": -0.26148285590301734,
+        "coefficient": 2.274646164656124,
+        "contribution": -0.5947809753031283
+      },
+      {
+        "feature": "in_degree",
+        "source_name": "in_degree",
+        "raw_value": 1,
+        "was_imputed": false,
+        "standardized_value": -0.29981706881372794,
+        "coefficient": 1.8911896381632352,
+        "contribution": -0.5670109338849959
+      },
+      {
+        "feature": "elliptic_f_048",
+        "source_name": "blocks_btwn_output_txs_mean",
+        "raw_value": 0,
+        "was_imputed": false,
+        "standardized_value": -0.2201222525531596,
+        "coefficient": 2.1972160180742093,
+        "contribution": -0.4836561392443788
+      },
+      {
+        "feature": "elliptic_f_006",
+        "source_name": "total_txs",
+        "raw_value": 1,
+        "was_imputed": false,
+        "standardized_value": -0.4139673921791848,
+        "coefficient": 0.9553224636337171,
+        "contribution": -0.395472348960644
+      },
+      {
+        "feature": "elliptic_f_028",
+        "source_name": "fees_mean",
+        "raw_value": 0.00272008,
+        "was_imputed": false,
+        "standardized_value": -0.3515700978525593,
+        "coefficient": 0.9312173774564442,
+        "contribution": -0.32738818451436574
+      }
+    ]
+  },
+  "matched_findings": [
+    {
+      "wallet_id": "1133XY4Ctn7KwHhwBqbLr3rBugfHff4Uaq",
+      "rule_id": "R2",
+      "family": "two_hop_exposure",
+      "reason": "At least 50 distinct illicit wallets are exactly two undirected graph hops away.",
+      "evidence": [
+        {
+          "feature": "two_hop_illicit_count",
+          "operator": "\u003e=",
+          "observed": 53,
+          "threshold": 50
+        }
+      ]
+    }
+  ],
+  "primary_findings": [
+    {
+      "wallet_id": "1133XY4Ctn7KwHhwBqbLr3rBugfHff4Uaq",
+      "rule_id": "R2",
+      "family": "two_hop_exposure",
+      "reason": "At least 50 distinct illicit wallets are exactly two undirected graph hops away.",
+      "evidence": [
+        {
+          "feature": "two_hop_illicit_count",
+          "operator": "\u003e=",
+          "observed": 53,
+          "threshold": 50
+        }
+      ]
+    }
+  ],
+  "reasons": [
+    "ML probability 29.8137% was below the 69.3382% decision threshold.",
+    "Rule R2: At least 50 distinct illicit wallets are exactly two undirected graph hops away.",
+    "Rules and ML disagree; review is recommended."
+  ]
+}

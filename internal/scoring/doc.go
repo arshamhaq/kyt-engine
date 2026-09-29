@@ -1,3 +1,3 @@
-// Package scoring will orchestrate rule evaluation and ML prediction and aggregate
-// their outputs into an explainable risk result. Scoring behavior is deferred.
+// Package scoring orchestrates rule evaluation and ML prediction, removes nested
+// rule overlap from primary reasons, and returns an explainable policy result.
 package scoring

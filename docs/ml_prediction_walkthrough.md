@@ -111,8 +111,8 @@ shown, and an analyst can see which observations increased or decreased the scor
 It is not yet sufficient for a production analyst decision. Several inputs are
 correlated or overlapping—for example direct illicit count, direct illicit ratio,
 and two-hop exposure—so individual coefficients are not independent evidence.
-The rule engine uses some of the same graph signals, meaning the future aggregator
-must not count rule and ML outputs as unrelated corroboration. Static Elliptic++
+The rule engine uses some of the same graph signals, so the aggregator does not
+count rule and ML outputs as unrelated corroboration. Static Elliptic++
 labels are also not point-in-time intelligence, and contributions explain the
 model calculation rather than causation or criminal attribution.
 

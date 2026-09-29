@@ -133,9 +133,9 @@ Serialized as JSON, the exact `[]RuleFinding` result returned by
 ]
 ```
 
-This is the complete rule-engine result for the example. It contains findings
-and their evidence; it does not contain a final classification, probability,
-or risk score. Those outputs require the future risk aggregator.
+This is the complete rule-engine stage for the example. The scorer now passes
+these findings and the ML prediction to the risk aggregator, which returns the
+final explainable `RiskResult`.
 
 Run the example with:
 

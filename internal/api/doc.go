@@ -1,3 +1,3 @@
-// Package api reserves a home for the future KYT HTTP API.
-// Routes, handlers, and transport contracts are deferred.
+// Package api exposes health and single-vector scoring over HTTP. It validates
+// the complete transport contract before calling the scoring application layer.
 package api

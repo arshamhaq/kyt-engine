@@ -72,5 +72,5 @@ go test ./internal/ml -run TestGoPredictionMatchesExactPythonTrace -v
 
 The test also compares the leading feature's standardized value and contribution
 to the Python trace. Separate tests reject artifact contract drift and malformed
-feature vectors. The predictor is not yet called by `KYTScorer`, HTTP, or the risk
-aggregator.
+feature vectors. `KYTScorer` now calls the predictor before the risk aggregator,
+and the HTTP API returns the resulting prediction inside `RiskResult`.

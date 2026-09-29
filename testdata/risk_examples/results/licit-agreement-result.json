@@ -1,0 +1,171 @@
+﻿{
+  "wallet_id": "111112TykSw72ztDN2WJger4cynzWYC5w",
+  "level": "low",
+  "recommended_action": "no_review",
+  "review_recommended": false,
+  "ml_triggered": false,
+  "rules_triggered": false,
+  "prediction": {
+    "wallet_id": "111112TykSw72ztDN2WJger4cynzWYC5w",
+    "model_version": "elliptic-logistic-v1",
+    "illicit_probability": 1.0039666876116033e-7,
+    "decision_threshold": 0.693382385987544,
+    "predicted_class": "licit",
+    "log_odds": -16.114136709512284,
+    "top_positive_factors": [
+      {
+        "feature": "in_degree",
+        "source_name": "in_degree",
+        "raw_value": 24,
+        "was_imputed": false,
+        "standardized_value": 2.0918108966289464,
+        "coefficient": 1.8911896381632352,
+        "contribution": 3.9560110927016097
+      },
+      {
+        "feature": "unique_in_neighbors",
+        "source_name": "unique_in_neighbors",
+        "raw_value": 24,
+        "was_imputed": false,
+        "standardized_value": 2.1121555780700434,
+        "coefficient": 0.6686688497076689,
+        "contribution": 1.4123326407917325
+      },
+      {
+        "feature": "out_degree",
+        "source_name": "out_degree",
+        "raw_value": 0,
+        "was_imputed": false,
+        "standardized_value": -0.7039275951052442,
+        "coefficient": -1.455375428749488,
+        "contribution": 1.0244789255348907
+      },
+      {
+        "feature": "elliptic_f_015",
+        "source_name": "btc_sent_total",
+        "raw_value": 0,
+        "was_imputed": false,
+        "standardized_value": -0.2617877151669409,
+        "coefficient": -3.107676944707984,
+        "contribution": 0.8135516468320828
+      },
+      {
+        "feature": "elliptic_f_035",
+        "source_name": "blocks_btwn_txs_total",
+        "raw_value": 0,
+        "was_imputed": false,
+        "standardized_value": -0.3086923355061199,
+        "coefficient": -2.2733468765001614,
+        "contribution": 0.7017647567223776
+      },
+      {
+        "feature": "elliptic_f_005",
+        "source_name": "lifetime_in_blocks",
+        "raw_value": 0,
+        "was_imputed": false,
+        "standardized_value": -0.3086787291471472,
+        "coefficient": -2.140770162410629,
+        "contribution": 0.6608102131290449
+      },
+      {
+        "feature": "elliptic_f_012",
+        "source_name": "btc_transacted_max",
+        "raw_value": 0.0106281,
+        "was_imputed": false,
+        "standardized_value": -0.3271540262533198,
+        "coefficient": -1.6911638220849,
+        "contribution": 0.5532710534490279
+      },
+      {
+        "feature": "elliptic_f_025",
+        "source_name": "fees_total",
+        "raw_value": 0.00704228,
+        "was_imputed": false,
+        "standardized_value": -0.2291112308266971,
+        "coefficient": -1.1145199290045156,
+        "contribution": 0.2553490327151076
+      }
+    ],
+    "top_negative_factors": [
+      {
+        "feature": "direct_licit_neighbor_count",
+        "source_name": "direct_licit_neighbor_count",
+        "raw_value": 23,
+        "was_imputed": false,
+        "standardized_value": 2.1808638458114,
+        "coefficient": -2.828473694403785,
+        "contribution": -6.168516018953817
+      },
+      {
+        "feature": "elliptic_f_001",
+        "source_name": "num_txs_as_sender",
+        "raw_value": 0,
+        "was_imputed": false,
+        "standardized_value": -0.8988658859827686,
+        "coefficient": 2.389586242476708,
+        "contribution": -2.147917554976061
+      },
+      {
+        "feature": "elliptic_f_051",
+        "source_name": "transacted_w_address_total",
+        "raw_value": 24,
+        "was_imputed": false,
+        "standardized_value": 1.7269974885691854,
+        "coefficient": -1.1091261792437888,
+        "contribution": -1.9154581260603594
+      },
+      {
+        "feature": "unique_neighbors",
+        "source_name": "unique_neighbors",
+        "raw_value": 24,
+        "was_imputed": false,
+        "standardized_value": 1.7385729789553852,
+        "coefficient": -1.0615464473559841,
+        "contribution": -1.8455759692791993
+      },
+      {
+        "feature": "elliptic_f_038",
+        "source_name": "blocks_btwn_txs_mean",
+        "raw_value": 0,
+        "was_imputed": false,
+        "standardized_value": -0.30991617501524066,
+        "coefficient": 3.14156774526669,
+        "contribution": -0.9736226591643065
+      },
+      {
+        "feature": "two_hop_illicit_count",
+        "source_name": "two_hop_illicit_count",
+        "raw_value": 0,
+        "was_imputed": false,
+        "standardized_value": -0.5410765548005368,
+        "coefficient": 1.7741012683079758,
+        "contribution": -0.9599246021233424
+      },
+      {
+        "feature": "elliptic_f_010",
+        "source_name": "btc_transacted_total",
+        "raw_value": 0.0106281,
+        "was_imputed": false,
+        "standardized_value": -0.3343678787313341,
+        "coefficient": 2.112428652849468,
+        "contribution": -0.7063282876245663
+      },
+      {
+        "feature": "elliptic_f_017",
+        "source_name": "btc_sent_max",
+        "raw_value": 0,
+        "was_imputed": false,
+        "standardized_value": -0.26148285590301734,
+        "coefficient": 2.274646164656124,
+        "contribution": -0.5947809753031283
+      }
+    ]
+  },
+  "matched_findings": [],
+  "primary_findings": [],
+  "reasons": [
+    "ML probability 0.0000% was below the 69.3382% decision threshold.",
+    "No deterministic rules matched.",
+    "Rules and ML agree that this wallet is not flagged."
+  ]
+}
